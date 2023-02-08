@@ -1,3 +1,4 @@
 # Cheat sheet
 
-1. Initialize project
+11. Login
+    * check if user exists
