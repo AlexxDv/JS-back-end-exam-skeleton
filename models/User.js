@@ -14,20 +14,20 @@ const userShema = new Schema(
       type: String,
       required: true,
     },
-  },
-  {
-    virtuals: {
-      repeatPassword: {
-        set(value) {
-          if (this.password !== value) {
-            throw new Error("Password does not match");
-          }
-        },
-      },
-    },
   }
+  // {
+  //   virtuals: {
+  //     repeatPassword: {
+  //       set(value) {
+  //         if (this.password !== value) {
+  //           throw new Error("Password does not match");
+  //         }
+  //       },
+  //     },
+  //   },
+  // }
 );
 
-const User = model(User, userShema);
+const User = model("User", userShema);
 
 module.exports = User;
